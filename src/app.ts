@@ -10,6 +10,7 @@ if(!process.env.NODE_ENV) {
 
 import express, {Express, Request, Response } from 'express';
 import cors from 'cors';
+import mainRouter from './routes/main.route';
 
 const PROJECT_NAME = String(process.env.PROJECT_NAME);
 const BASE_URL = String(process.env.BASE_URL) || "http://127.0.0.1";
@@ -20,9 +21,11 @@ const app : Express = express();
 app.disable("x-powered-by");
 
 app.use(cors());
-app.use(express.json()); // specifies that the type of json in request body and response body will be JSON
+app.use(express.json());
 app.use(express.urlencoded({ extended: true })); 
 
+
+app.use("/api/v1/main", mainRouter);
 
 app.get('/status',(req:Request, res : Response) => {
     res.send('Server is up and running')
