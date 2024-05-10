@@ -18,7 +18,7 @@ const PROJECT_NAME = String(process.env.PROJECT_NAME);
 const BASE_URL = String(process.env.BASE_URL) || "http://127.0.0.1";
 const PORT = Number(process.env.PORT);
 
-const app : express.Application = express();
+const app = express();
 
 app.disable("x-powered-by");
 
@@ -38,6 +38,8 @@ app.get('/status',(req:Request, res : Response) => {
     res.send('Server is up and running')
 })
 
-app.listen(PORT, () => {
+app.listen(8643, () => {
     console.log(`${PROJECT_NAME} is running on ${BASE_URL}:${PORT}`);
 });
+
+export default app;

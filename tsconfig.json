@@ -13,7 +13,8 @@
         "skipLibCheck": true,
         "resolveJsonModule": true
     },
-    "include": ["src/**/*"],
+    "include": ["src/**/*", "__tests__"],
+    "exclude": ["./coverage", "./dist", "__tests__", "jest.config.js"],
     "typedocOptions": {
         "entryPoints": ["./src"],
         "entryPointStrategy": "Expand",
