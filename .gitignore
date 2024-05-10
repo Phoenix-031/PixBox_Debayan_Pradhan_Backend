@@ -1,6 +1,6 @@
 /node_modules
-.env.development
-.env.production
+# .env.development
+# .env.production
 coverage
 jest.config.js
 dist

@@ -5,6 +5,7 @@ import templateJson from '../assets/template.json';
 import templateSchema from '../src/validations/template.validation';
 
 describe('GET /api/v1/main', () => {
+
     it('should return 200', async () => {
         const response = await request(app).get('/api/v1/main/getTemplate');
         expect(response.status).toBe(200);
