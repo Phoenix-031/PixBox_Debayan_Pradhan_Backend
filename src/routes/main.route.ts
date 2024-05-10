@@ -1,0 +1,79 @@
+import { Router, Request, Response } from "express";
+
+const mainRouter : Router = Router();
+
+mainRouter.get('/getTemplate', (req : Request, res : Response) => {
+    res.json({
+  "canvas": {
+    "width": 1535,
+    "height": 728,
+    "backgroundColor": "linear-gradient(#865439, #3E2C29)"
+  },
+  "objects": [
+    {
+      "type": "image",
+      "source": "",
+      "scaleY": 1.2,
+      "top": 0,
+      "left": 0,
+      "opacity": 0.1
+    },
+    {
+      "type": "image",
+      "source": "",
+      "scaleX": 0.5,
+      "scaleY": 0.5,
+      "top": 50,
+      "left": 50
+    },
+    {
+      "type": "text",
+      "text": "Wake Up and Smell the Coffee!",
+      "fontSize": 48,
+      "fontFamily": "Georgia, serif",
+      "fontWeight": "bold",
+      "fill": "#FFF4D1",
+      "left": 300,
+      "top": 50
+    },
+    {
+      "type": "text",
+      "text": "New coffee experience brewing soon in your neighborhood!",
+      "fontSize": 32,
+      "fontFamily": "Georgia, serif",
+      "fill": "#FFD700",
+      "left": 300,
+      "top": 120
+    },
+    {
+      "type": "text",
+      "text": "Grand Opening Date: September 15, 2023\nAddress: Bandra West, Mumbai\nFirst 50 customers get a free latte!",
+      "fontSize": 24,
+      "fontFamily": "Georgia, serif",
+      "fill": "#FFFAF0",
+      "left": 300,
+      "top": 180
+    },
+    {
+      "type": "text",
+      "text": "Visit us on September 15, 2023!\nFollow us on social media for more updates.",
+      "fontSize": 28,
+      "fontFamily": "Georgia, serif",
+      "fontWeight": "600",
+      "fill": "#DAA520",
+      "left": 300,
+      "top": 300
+    },
+    {
+      "type": "image",
+      "source": "",
+      "scaleX": 0.6,
+      "scaleY": 0.6,
+      "top": 200,
+      "left": 850
+    }
+  ]
+})
+})
+
+export default mainRouter;
