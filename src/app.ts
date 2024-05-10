@@ -38,7 +38,7 @@ app.get('/status',(req:Request, res : Response) => {
     res.send('Server is up and running')
 })
 
-app.listen(8643, () => {
+app.listen(PORT, () => {
     console.log(`${PROJECT_NAME} is running on ${BASE_URL}:${PORT}`);
 });
 
