@@ -1,8 +1,18 @@
+import dotenv from 'dotenv';
+
+
+dotenv.config ({
+  path: '.env.development'
+})
+
 import request from 'supertest';
 import app from '../src/app';
 
+
 import templateJson from '../assets/template.json';
 import templateSchema from '../src/validations/template.validation';
+
+
 
 describe('GET /api/v1/main', () => {
 
